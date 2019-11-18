@@ -1,0 +1,61 @@
+.bg-green{
+	 background-color: #00B41D	;
+	 color: #B61523;
+}
+.bg-green:hover{
+	background-image: url(img:/images.jpg);
+	background-size: 60%:
+	color:#ffffff; 
+}
+
+img.logo-form{
+    width: 95%; 
+    margin: 0 2.5% 20px 2.5%;
+    justify-content: center;
+}
+#logo{
+	background: url(img/imagem.woff) format('woff');
+}
+.btn-green-fvc{
+	background-color:#151E93;
+	color: #5037FF;
+}
+.btn-green-fvc:hover{
+	background-color: #007549;
+	color: #e9e9e9;
+}
+
+.alerta-sm{
+	font-size: 9pt;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+#cpf,
+#senha [type = number]{
+width: 100%;
+margin: 0 2.3% 20px 2.1%;
+}
+
+.tipodeUsuario[type = text]{
+width: 110px;
+margin-top: 0 2.5% 10px 2.1%;
+color:#316AFF;
+}
+.tipodeUsuario:hover{
+	background-color:#316AFF;
+	color: #FF4F28;
+}
+
+.bg-green-png{
+	background:url('adchoices_icon.png');
+	width:12px;
+	height:12px
+	}

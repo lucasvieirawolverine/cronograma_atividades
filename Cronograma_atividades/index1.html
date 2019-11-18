@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema de controle de Estágio</title>
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel = "shortcut icon" href = "img/sehc_logo.icon" type = "image/x-icon">  
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script>
+    $(document).ready(function(){
+  	     $('#cpf').mask('000.000.000-00', {reverse: true});
+	});
+    
+    </script>
+     <style type="text/css">
+    @font-face {
+      font-family: 'Sigmar One';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Sigmar One'), local('pexels'), url(https://www.pexels.com/pt-br/procurar/wallpaper%204k/format) format('woff');
+    }
+    body{
+        margin: 0;
+        font: 14px Lucida sans;
+        background: #333 url('http://i.imgur.com/Ggzvfr8.jpg') no-repeat;
+        -webkit-background-size: cover;
+          -moz-background-size: cover;
+            -o-background-size: cover;
+                background-size: cover;
+        color: #fff;
+    }
+    a, a:active, a:focus{
+        text-decoration: none;
+        color: #fafafa;
+    }
+    #logo{
+        font: 30px 'Sigmar One';
+        text-align: center;
+        padding: 0;
+        margin: 5em 0 0;
+        text-shadow: rgba(0,0,0,1) 0 0 5px;
+    }
+    #wrap{
+        margin: 0 auto;
+        max-width: 50%;
+        background: rgba(255,255,255,.3);
+        border-radius: 5px;
+        text-shadow: rgba(0,0,0,.5) 1px 1px 0;
+        box-shadow: rgba(0,0,0,.2) 0 0 3px;
+        text-align: center;
+        padding: 3em 1em;
+    }
+    hr{
+        margin: 1em;
+        border: 0;
+        border-top: 1px rgba(0,0,0,.2) solid;
+        border-bottom: 1px rgba(255,255,255,.2) solid;
+    }
+    </style>
+</head>
+<body class="bg-green">
+    <div class="row justify-content-center align-items-center" style="height:100vh; width: 100%">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body"> 
+                <img src="img/fvclogo.png" class="logo-form">
+                    <form action="login.php" method="POST" id="formLogin">
+                        <div class="form-group">
+                            <label for="tipoUsuario">Tipo de usuário:</label>
+                            <select class="form-control form-control-sm" id="tipoUsuario" name="tipoUsuario" onchange="validaTipoUsuario();" required="">
+                                <option value="0" selected>Aluno</option>
+                                <option value="1">Administrador</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="campoCpf">    
+                            <label for="cpf">CPF:</label>
+                            <input type="text" class="cpf form-control" id="cpf" placeholder="CPF" name="cpf" minlength=11 maxlength=11>
+                        </div>
+                        <div class="form-group" id="campoUsuario" style="display: none">    
+                            <label for="usuario">Usuario:</label>
+                            <input type="text" class="form-control" id="usuario" placeholder="Nome de Usuário" name="usuario" minlength=4 maxlength=20>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Senha:</label>
+                            <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha" required="" minlength=6 maxlength=12>
+                        </div>
+                        <button type="submit" class="btn btn-default btn-green-fvc">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
